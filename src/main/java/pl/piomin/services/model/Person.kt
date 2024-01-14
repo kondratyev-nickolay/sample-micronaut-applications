@@ -6,7 +6,6 @@ import javax.validation.constraints.NotNull
 import javax.validation.constraints.PositiveOrZero
 
 data class Person(
-    @kotlin.jvm.JvmField
     var id: @Max(10000) Int? = null,
     var firstName: @NotBlank String? = null,
     var lastName: @NotBlank String? = null,
@@ -24,11 +23,4 @@ data class Person(
                 '}'
     }
 
-    fun getId(): Int? {
-        return id
-    }
-
-    fun setId(id: Int?) {
-        this.id = id
-    }
 }
